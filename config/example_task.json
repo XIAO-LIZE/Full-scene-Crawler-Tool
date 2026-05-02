@@ -1,0 +1,48 @@
+{
+  "name": "示例：爬取新闻标题",
+  "description": "爬取示例网站的新闻标题列表",
+  "spider_type": "static",
+  "spider_config": {
+    "start_urls": ["https://example.com/news"],
+    "allowed_domains": ["example.com"],
+    "timeout": 30,
+    "retry_times": 3,
+    "delay_between_requests": 1.0,
+    "follow_links": false,
+    "max_depth": 1,
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
+  },
+  "parse_rules": [
+    {
+      "name": "title",
+      "selector": "h2.news-title a",
+      "selector_type": "css",
+      "attribute": "text",
+      "default_value": "",
+      "post_process": "strip"
+    },
+    {
+      "name": "link",
+      "selector": "h2.news-title a",
+      "selector_type": "css",
+      "attribute": "href",
+      "default_value": "",
+      "post_process": ""
+    },
+    {
+      "name": "summary",
+      "selector": "p.news-summary",
+      "selector_type": "css",
+      "attribute": "text",
+      "default_value": "暂无摘要",
+      "post_process": "strip"
+    }
+  ],
+  "storage_config": {
+    "storage_type": "csv",
+    "file_path": "data/output/news.csv",
+    "encoding": "utf-8"
+  }
+}

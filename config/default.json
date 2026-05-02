@@ -1,0 +1,33 @@
+{
+  "app": {
+    "name": "全场景爬虫工具",
+    "version": "1.0.0",
+    "language": "zh-CN"
+  },
+  "spider": {
+    "max_workers": 5,
+    "default_timeout": 30,
+    "default_retry_times": 3,
+    "default_retry_delay": 5,
+    "default_delay_between_requests": 1.0,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  },
+  "storage": {
+    "default_type": "csv",
+    "output_dir": "data/output",
+    "encoding": "utf-8"
+  },
+  "proxy": {
+    "enabled": false,
+    "http_proxy": "",
+    "https_proxy": "",
+    "proxy_list": [],
+    "rotation": false
+  },
+  "logging": {
+    "level": "INFO",
+    "log_dir": "data/logs",
+    "console_output": true,
+    "file_output": true
+  }
+}

@@ -1,0 +1,25 @@
+# 全场景爬虫工具 - 依赖列表
+# 核心依赖（必需）
+PySide6>=6.5.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# 动态页面爬取（可选，用于Selenium）
+selenium>=4.10.0
+
+# 数据处理
+pandas>=2.0.0
+
+# 数据库支持
+pymysql>=1.1.0
+
+# 任务调度
+APScheduler>=3.10.0
+
+# 工具库
+fake-useragent>=1.1.0
+colorlog>=6.7.0
+
+# 打包工具（仅打包时需要）
+pyinstaller>=6.0.0
